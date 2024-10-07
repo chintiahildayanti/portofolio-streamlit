@@ -42,7 +42,7 @@ if selected == "Home":
 # Age distribution plot
     st.subheader("Age Distribution")
     plt.figure(figsize=(10, 6))
-    filtered_df['age'].plot(kind='hist', bins=30, title='Age Distribution', color='lightblue')
+    filtered_df['age'].plot(kind='hist', bins=30, title='Age Distribution', color='lightgrey')
     plt.xlabel('Age')
     plt.ylabel('Frequency')
     st.pyplot(plt)
@@ -58,7 +58,7 @@ if selected == "Home":
 # Visualisasi distribusi income berdasarkan tingkat pendidikan yang dipilih
     st.subheader(f"Income Distribution for Education Level: {selected_education}")
     plt.figure(figsize=(6, 4))
-    sns.countplot(x='income', data=filtered_data, palette=['lightblue', 'blue'])
+    sns.countplot(x='income', data=filtered_data, palette=['lightgrey', 'darkgrey'])
     plt.title(f'Income Distribution for {selected_education}')
     st.pyplot(plt)
 
