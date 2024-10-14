@@ -5,20 +5,22 @@ import joblib
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
+import xgboost as xgb
+
 
 # Membuat menu navigasi
 with st.sidebar:
     selected = option_menu(
         menu_title="Main Menu",  # required
-        options=["Home", "Page 2"],  # required
-        icons=["house", "file"],  # optional
+        options=["Visualization", "Prediction"],  # required
+        icons=["bar-chart-line", "graph-up-arrow"],  # optional
         menu_icon="cast",  # optional
         default_index=0,  # optional
     )
 
 # Halaman Home
-if selected == "Home":
-    st.title("Home Page")
+if selected == "Visualization":
+    st.title("Visualization")
     st.write("This is the main page, which contains visualizations of adult census income of United States Citizens")
 
     # Title
@@ -64,8 +66,8 @@ if selected == "Home":
 
 
 # Halaman Page 2
-if selected == "Page 2":
-    st.title("Page 2")
+if selected == "Prediction":
+    st.title("Prediction")
     st.write("This is the second page, containing the application for predicting social assistance recipients")
 
     @st.cache_resource
